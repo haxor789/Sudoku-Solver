@@ -1,0 +1,36 @@
+input {
+  width: 35px;
+  height: 35px;
+  font-size: 35px;
+  border: none;
+  text-align: center;
+}
+
+.normal {
+  height: 35px;
+  width: 35px;
+  border: 1px silver dashed;
+}
+
+.solidR {
+ height: 35px;
+ width: 35px;
+ border: 1px silver dashed;
+ border-right: 1px black solid;
+}
+
+.solidB {
+ height: 35px;
+ width: 35px;
+ border: 1px silver dashed;
+ border-bottom: 1px black solid;
+}
+
+
+.solidBR {
+ height: 35px;
+ width: 35px;
+ border: 1px silver dashed;
+ border-right: 1px black solid;
+ border-bottom: 1px black solid;
+}

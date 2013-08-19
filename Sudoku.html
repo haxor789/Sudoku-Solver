@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Sudoku Solver</title>
+	<link rel="stylesheet" type="text/css" href="sudoku.css"/>
+	<!--<script type="text/javascript" src="script.js"></script>-->
+	
+</head>
+
+<body>
+
+<style type="text/css">
+input {
+  width: 35px; height: 35px; font-size: 35px; border: none; text-align: center;
+}
+</style>
+
+<table cellpadding="0" cellspacing="0" style="width: 325px; border-collapse: collapse;">
+  <tr>
+    <td class="normal" ><input id="0" name="0" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="1" name="1" type="text" maxlength="1"/></td>
+    <td class="solidR" ><input id="2" name="2" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="3" name="3" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="4" name="4" type="text" maxlength="1"/></td>
+    <td class="solidR" ><input id="5" name="5" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="6" name="6" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="7" name="7" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="8" name="8" type="text" maxlength="1"/></td>
+  </tr>
+  <tr>
+    <td class="normal" ><input id="9" name="9" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="10" name="10" type="text" maxlength="1"/></td>
+    <td class="solidR" ><input id="11" name="11" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="12" name="12" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="13" name="13" type="text" maxlength="1"/></td>
+    <td class="solidR" ><input id="14" name="14" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="15" name="15" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="16" name="16" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="17" name="17" type="text" maxlength="1"/></td>
+  </tr>
+  <tr>
+    <td class="solidB" ><input id="18" name="18" type="text" maxlength="1"/></td>
+    <td class="solidB" ><input id="19" name="19" type="text" maxlength="1"/></td>
+    <td class="solidBR"><input id="20" name="20" type="text" maxlength="1"/></td>
+    <td class="solidB" ><input id="21" name="21" type="text" maxlength="1"/></td>
+    <td class="solidB" ><input id="22" name="22" type="text" maxlength="1"/></td>
+    <td class="solidBR"><input id="23" name="23" type="text" maxlength="1"/></td>
+    <td class="solidB" ><input id="24" name="24" type="text" maxlength="1"/></td>
+    <td class="solidB" ><input id="25" name="25" type="text" maxlength="1"/></td>
+    <td class="solidB" ><input id="26" name="26" type="text" maxlength="1"/></td>
+  </tr>
+  <tr>
+    <td class="normal" ><input id="27" name="27" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="28" name="28" type="text" maxlength="1"/></td>
+    <td class="solidR" ><input id="29" name="29" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="30" name="30" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="31" name="31" type="text" maxlength="1"/></td>
+    <td class="solidR" ><input id="32" name="32" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="33" name="33" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="34" name="34" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="35" name="35" type="text" maxlength="1"/></td>
+  </tr>
+  <tr>
+    <td class="normal" ><input id="36" name="36" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="37" name="37" type="text" maxlength="1"/></td>
+    <td class="solidR" ><input id="38" name="38" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="39" name="39" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="40" name="40" type="text" maxlength="1"/></td>
+    <td class="solidR" ><input id="41" name="41" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="42" name="42" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="43" name="43" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="44" name="44" type="text" maxlength="1"/></td>
+  </tr>
+  <tr>
+    <td class="solidB" ><input id="45" name="45" type="text" maxlength="1"/></td>
+    <td class="solidB" ><input id="46" name="46" type="text" maxlength="1"/></td>
+    <td class="solidBR"><input id="47" name="47" type="text" maxlength="1"/></td>
+    <td class="solidB" ><input id="48" name="48" type="text" maxlength="1"/></td>
+    <td class="solidB" ><input id="49" name="49" type="text" maxlength="1"/></td>
+    <td class="solidBR"><input id="50" name="50" type="text" maxlength="1"/></td>
+    <td class="solidB" ><input id="51" name="51" type="text" maxlength="1"/></td>
+    <td class="solidB" ><input id="52" name="52" type="text" maxlength="1"/></td>
+    <td class="solidB" ><input id="53" name="53" type="text" maxlength="1"/></td>
+  </tr>
+  <tr>
+    <td class="normal" ><input id="54" name="54" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="55" name="55" type="text" maxlength="1"/></td>
+    <td class="solidR" ><input id="56" name="56" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="57" name="57" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="58" name="58" type="text" maxlength="1"/></td>
+    <td class="solidR" ><input id="59" name="59" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="60" name="60" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="61" name="61" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="62" name="62" type="text" maxlength="1"/></td>
+  </tr>
+  <tr>
+    <td class="normal" ><input id="63" name="63" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="64" name="64" type="text" maxlength="1"/></td>
+    <td class="solidR" ><input id="65" name="65" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="66" name="66" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="67" name="67" type="text" maxlength="1"/></td>
+    <td class="solidR" ><input id="68" name="68" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="69" name="69" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="70" name="70" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="71" name="71" type="text" maxlength="1"/></td>
+  </tr>
+  <tr>
+    <td class="normal" ><input id="72" name="72" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="73" name="73" type="text" maxlength="1"/></td>
+    <td class="solidR" ><input id="74" name="74" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="75" name="75" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="76" name="76" type="text" maxlength="1"/></td>
+    <td class="solidR" ><input id="77" name="77" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="78" name="78" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="79" name="79" type="text" maxlength="1"/></td>
+    <td class="normal" ><input id="80" name="80" type="text" maxlength="1"/></td>
+  </tr>
+</table>
+	
+</body>
+
+</html>
