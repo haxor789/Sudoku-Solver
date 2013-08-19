@@ -153,7 +153,7 @@ function seekAndDestroy(){
             //o.fixed = true;
             del_num(o.row,o.col,o.square,o.value);
 	    $('input[name='+toFix[i]+']').val(o.value);
-	}
+	    }
         else{
             nToFix[c]=toFix[i];
             c++;

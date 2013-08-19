@@ -12,26 +12,11 @@ table tr td input {
   border: 1px silver dashed;
 }
 
-.solidR {
- height: 35px;
- width: 35px;
- border: 1px silver dashed;
+.right {
  border-right: 1px black solid;
 }
 
-.solidB {
- height: 35px;
- width: 35px;
- border: 1px silver dashed;
- border-bottom: 1px black solid;
-}
-
-
-.solidBR {
- height: 35px;
- width: 35px;
- border: 1px silver dashed;
- border-right: 1px black solid;
+.bottom {
  border-bottom: 1px black solid;
 }
 
@@ -57,4 +42,9 @@ input {
 .start{
 	color:yellow;
 	background-color:gray;
+}
+
+table {
+	width: 325px; 
+	border-collapse: collapse;
 }
