@@ -46,5 +46,10 @@ input {
 
 table {
 	width: 325px; 
-	border-collapse: collapse;
+	border-collapse: collapse; /*entspricht cellspacing:0;*/
 }
+
+table td {
+	padding: 0px;
+}
+
