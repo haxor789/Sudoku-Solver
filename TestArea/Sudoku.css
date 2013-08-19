@@ -1,0 +1,55 @@
+table tr td input {
+  width: 35px;
+  height: 35px;
+  font-size: 35px;
+  border: none;
+  text-align: center;
+}
+
+.normal {
+  height: 35px;
+  width: 35px;
+  border: 1px silver dashed;
+}
+
+.right {
+ border-right: 1px black solid;
+}
+
+.bottom {
+ border-bottom: 1px black solid;
+}
+
+/*div {
+    height:25px;
+    width:50px;
+    border: #6495ED;
+    background-color:gray;
+    border-radius:5px;
+    margin-bottom:10;
+    margin-right:10;
+    text-align:center
+}*/
+
+input {
+  width: 35px;
+  height: 35px;
+  font-size: 35px;
+  border: none;
+  text-align: center;
+}
+
+.start{
+	color:yellow;
+	background-color:gray;
+}
+
+table {
+	width: 325px; 
+	border-collapse: collapse; /*entspricht cellspacing:0;*/
+}
+
+table td {
+	padding: 0px;
+}
+
